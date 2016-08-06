@@ -7,6 +7,11 @@ function main(){
 	let finish_hour = document.getElementById("finish-hour").value;
 	let finish_minute = document.getElementById("finish-minute").value;
 	let pay_rate = document.getElementById("pay-rate").value;
+	if ((finish_hour * 1) < (start_hour * 1)) {
+		finish_hour = (finish_hour * 1) + 12 ;
+		console.log(finish_hour);
+	}
+	
 
 	let start_time = (start_hour * 60) + (start_minute * 1);
 	let finish_time = (finish_hour * 60) + (finish_minute * 1);
