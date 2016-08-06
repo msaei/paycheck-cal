@@ -1,0 +1,12 @@
+/* all styles go here */
+body {
+	background-color: #7e8aa2;
+}
+.form-tray {
+	margin-bottom: 5px;
+	border-radius: 10px;
+	border-color: white;
+	border-style: solid;
+	border-width: 2px;
+	padding: 5px;
+}
