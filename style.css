@@ -5,10 +5,12 @@ body {
 .form-tray {
 	margin-bottom: 5px;
 	border-radius: 10px;
-	border-color: white;
+	background-color: #91aa9d;
 	border-style: solid;
 	border-width: 2px;
-	padding: 5px;
+	padding-top: 15px;
+	padding-bottom: 5px;
+	padding-right: 5px;
 }
 .log-row {
 	background-color: #D1DBBD;
