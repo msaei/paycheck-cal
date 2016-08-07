@@ -22,14 +22,21 @@
       <div calss="row">
         <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6 text-center">
           
-          <div class="form-tray" >
-            <div class="form-group form-inline">
-              <label for="pay-rate">Pay Rate:</label>
-              <input type="text" class="form-control" id="pay-rate" size="1" maxlength="5" value="15.00">
+          <div class="form-horizontal form-tray" >
+            <div class="form-group">
+              <div class = "col-xs-4 text-right">
+              <label for="pay-rate" class = "control-lable">PayRate:$</label>
+              </div>
+              <div class="col-xs-4">
+              <input type="text" class="form-control" id="pay-rate" value="15.00">
+              </div>
             </div>
-            <div class="form-group form-inline">
-              <label for="start-hour">From:</label>
-              <select class="form-control" id="start-hour" size="1">
+            <div class="form-group">
+              <div class = "col-xs-4 text-right">
+              <label for="start-hour" class = "control-label">Start:</label>
+              </div>
+              <div class = "col-xs-4">
+              <select class="form-control" id="start-hour">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -43,7 +50,9 @@
                 <option>11</option>
                 <option>12</option>
               </select>
-              <select class="form-control" id="start-minute" size="1">
+              </div>
+              <div class="col-xs-4">
+              <select class="form-control" id="start-minute">
                 <option>00</option>
                 <option>05</option>
                 <option>10</option>
@@ -57,11 +66,15 @@
                 <option>50</option>
                 <option>55</option>
               </select>
+              </div>
             </div>
            
-            <div class="form-group form-inline">
-              <label for="finish-hour">To:</label>
-              <select class="form-control" id="finish-hour" size="1">
+            <div class="form-group">
+              <div class = "col-xs-4 text-right">
+              <label for="finish-hour" class= "control-lable">Finish:</label>
+              </div>
+              <div class = "col-xs-4">
+              <select class="form-control" id="finish-hour" >
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -75,7 +88,9 @@
                 <option>11</option>
                 <option>12</option>
               </select>
-              <select class="form-control" id="finish-minute" size="1">
+              </div>
+              <div class = "col-xs-4">
+              <select class="form-control" id="finish-minute">
                 <option>00</option>
                 <option>05</option>
                 <option>10</option>
@@ -89,6 +104,7 @@
                 <option>50</option>
                 <option>55</option>
               </select>
+              </div>
             </div>
           </div>
           <button type="button" class="btn btn-primary" id="calculateButton">Calculate and add</button>
