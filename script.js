@@ -44,7 +44,7 @@ function mainFunction(){
 	var log_element = '<p>' + log_ID + '-' + msg + '</p>';
 	//log_element = log_element + "<button type=\"button\" class=\"close\" >&times;</button> </p>" ;
 	$("div.log-div").append(log_element);
-	$("#total-payment").html("Your paycheck is $"+ total_payment);
+	$("#total-payment").html("Total: $"+ total_payment);
 }
 
 
