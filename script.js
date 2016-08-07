@@ -4,8 +4,6 @@
 $( document ).ready(function(){
 
 	$('#calculateButton').click(function(){
-    //console.log('hi from click');
-    //$("#total-payment").html("there we go");
 	mainFunction();
 	});
 
@@ -33,20 +31,24 @@ function mainFunction(){
 	total_payment = total_payment + payment ;
 	log_ID = log_ID + 1;
 
-	//console.log(total_payment);
-
 	//apend information to page
 	var msg = "from ";
 	msg = msg + start_hour + ":" + start_minute;
 	msg = msg + " to " + finish_hour + ":" + finish_minute;
-	msg = msg + " got $" + payment + "."
-	console.log(msg);
-	var log_element = '<p>' + log_ID + '-' + msg + '</p>';
-	//log_element = log_element + "<button type=\"button\" class=\"close\" >&times;</button> </p>" ;
+	msg = msg + " got $" + payment ;
+
+	var log_element = '<p data-pay='+payment+'>' + log_ID + '-' + msg + "<button type=\"button\" class=\"close\" >&times;</button> </p>" ;
 	$("div.log-div").append(log_element);
 	$("#total-payment").html("Total: $"+ total_payment);
 }
 
 
+$(".log-div").delegate(".close", "click",function(){
+        $(this).parent().hide();
+        var taken_payment = $(this).parent().data('pay');
+        total_payment = total_payment - taken_payment ;
+        $("#total-payment").html("Total: $"+ total_payment);
+
+ });
 
 });
