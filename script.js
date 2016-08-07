@@ -36,13 +36,13 @@ function mainFunction(){
 	//console.log(total_payment);
 
 	//apend information to page
-	var msg = "you worked from ";
+	var msg = "from ";
 	msg = msg + start_hour + ":" + start_minute;
 	msg = msg + " to " + finish_hour + ":" + finish_minute;
-	msg = msg + " you earned $" + payment + "."
+	msg = msg + " got $" + payment + "."
 	console.log(msg);
-	var log_element = "<p id='log" + log_ID + "'>" + log_ID +'-' + msg ;
-	log_element = log_element + "<button type=\"button\" class=\"close\" >&times;</button> </p>" ;
+	var log_element = '<p>' + log_ID + '-' + msg + '</p>';
+	//log_element = log_element + "<button type=\"button\" class=\"close\" >&times;</button> </p>" ;
 	$("div.log-div").append(log_element);
 	$("#total-payment").html("Your paycheck is $"+ total_payment);
 }
