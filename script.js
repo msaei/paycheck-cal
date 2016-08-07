@@ -28,18 +28,18 @@ function mainFunction(){
 	var worked_minutes = worked_time % 60 ;
 	var worked_hours = (worked_time - worked_minutes)/60 ;
 	var payment = worked_time / 60 * pay_rate  ;
-	total_payment = total_payment + payment ;
+	total_payment = (total_payment*1) + (payment*1) ;
 	log_ID = log_ID + 1;
 
 	//apend information to page
-	var msg = "from ";
+	var msg = "worked(";
 	msg = msg + start_hour + ":" + start_minute;
-	msg = msg + " to " + finish_hour + ":" + finish_minute;
-	msg = msg + " got $" + payment ;
+	msg = msg + "~" + finish_hour + ":" + finish_minute;
+	msg = msg + ")got $" + payment.toFixed(2) ;
 
-	var log_element = '<p data-pay='+payment+'>' + log_ID + '-' + msg + "<button type=\"button\" class=\"close\" >&times;</button> </p>" ;
-	$("div.log-div").append(log_element);
-	$("#total-payment").html("Total: $"+ total_payment);
+	var log_element = '<p class = \'log-row\' data-pay='+payment+'>' + msg + "<button type=\"button\" class=\"close\" >&times;</button> </p>" ;
+	$("div.log-div").prepend(log_element);
+	$("#total-payment").html("Total: $"+ total_payment.toFixed(2));
 }
 
 
@@ -47,7 +47,7 @@ $(".log-div").delegate(".close", "click",function(){
         $(this).parent().hide();
         var taken_payment = $(this).parent().data('pay');
         total_payment = total_payment - taken_payment ;
-        $("#total-payment").html("Total: $"+ total_payment);
+        $("#total-payment").html("Total: $"+ total_payment.toFixed(2));
 
  });
 
